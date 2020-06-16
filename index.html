@@ -1,0 +1,92 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, intial-scale=1.0">
+    <script src="src/js/chart/core.js"></script>
+    <script src="src/js/chart/charts.js"></script>
+    <script src="src/js/chart/theme/animated.js"></script>
+    <link rel="stylesheet" href="src/css/main.css" type="text/css"></style>
+    <link rel="stylesheet" href="src/css/modal.css" type="text/css"></style>
+  </head>
+    <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                Configurações
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="input-container">
+                        <label for="port" class="input-label">Porta:</label>
+                        <input type="text" name="port" id="input-port" class="model-input">
+                    </div>
+                    <div class="input-container">
+                        <label for="baudrate" class="input-label">BaudRate:</label>
+                        <input type="text" name="baudrate" id="input-baudrate" class="model-input">
+                    </div>
+                </form>
+            </div>
+            <div class="buttons-form-container">
+                <button class="bt-save-config" id="bt-save-config">
+                    <img src="src/img/save.svg"> 
+                </button>
+                <button class="bt-cancel-config" id="bt-cancel-config">
+                    <img src="src/img/close.svg">
+                </button>
+            </div>
+
+          </div>
+    </div>
+    <div class="main-container">
+        <div class="header">
+            <div class="data-actions button-container">
+                <button id="bt-open-settings" class="action-button">
+                    <img src="src/img/settings.svg"> 
+                </button>
+                <button id="bt-create-csv" class="action-button">
+                    <img src="src/img/save.svg"> 
+                </button>
+            </div>
+            <div class="info-container">
+                <div id="hour" class="info-subcontainer">
+                    <a>Hora Atual</a>
+                    <div id="hora" class="clock"></div>
+                </div>
+                <div id="duration-container" class="info-subcontainer">
+                    <a>Temperature</a>
+                    <div id="temperature">0 °C</div>
+                </div>
+                <div id="duration-container" class="info-subcontainer">
+                    <a>Duração</a>
+                    <div id="duration-time" class="clock"></div>
+                </div>
+                <div class="info-subcontainer ">
+                    <a>Ações</a>
+                    <div class="button-container">
+                        <button id="btn-action" class="action-button tooltip">
+                            <img id="btn-action-img">
+                            <span class="tooltiptext" id="tooltip-play-pause"></span>
+                        </button>
+                        <button id="btn-action-stop" class="action-button tooltip">
+                            <img id="btn-action-stop-img">
+                            <span class="tooltiptext">Stop</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chartdiv"></div>
+    </div>  
+    </body>
+    <script type="module" src="src/js/initialize-elements.js"></script>
+    <script type="module" src="src/js/live-chart.js"></script>
+    <script type="module" src="src/js/createcsv.js"></script>
+</html>
+<!--
+    #fff1e6
+    #F0EFEB
+    #EDDCD2
+    #DDBEA9
+    #A5A58D
+    #B7B7A4
+-->
